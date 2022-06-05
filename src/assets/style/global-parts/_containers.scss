@@ -1,5 +1,8 @@
 .container {
     margin: auto;
-    width: 100%;
+    width: 1000px;
     max-width: var(--container-md);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
