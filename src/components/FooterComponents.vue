@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <footer>
       <div class="footer-top">
           <div class="container">
@@ -97,4 +97,4 @@ li {
     width: 300px;
     height: 300px;
 }
-</style>
+</style> -->
