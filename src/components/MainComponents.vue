@@ -10,6 +10,7 @@
                         <h5 class="comics-series">{{comics.series}}</h5>
                     </div>
                 </div>
+                <button class="load-more-button">LOAD MORE</button>
             </div>
         </div>
         <div class="blue-container">
@@ -161,6 +162,7 @@ export default {
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
+    margin-bottom: 50px;
 }
 .comics {
     width: calc(18% - 35px);
@@ -178,6 +180,14 @@ export default {
     margin: 10px 0;
     font-size: 12px;
 }
+.load-more-button{
+    background-color: var(--primary-color);
+    padding: 10px 50px;
+    border: none;
+    color: white;
+    margin: 20px auto;
+}
+
 
 .main-icons {
     height: 35px;
