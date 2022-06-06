@@ -2,22 +2,13 @@
   <header class="header">
       <div class="container">
           <div class="header-logo">
-          <img class="logo" src="../assets/img/dc-logo.png" alt=""/>
-        </div>
-        <nav class="header-nav">
-          <ul>
-            <li>CHARACTERS</li>
-            <li>COMICS</li>
-            <li>MOVIES</li>
-            <li>TV</li>
-            <li>GAMES</li>
-            <li>COLLECTIBLES</li>
-            <li>VIDEOS</li>
-            <li>FANS</li>
-            <li>NEWS</li>
-            <li>SHOP</li>
-          </ul>
-        </nav>
+            <img class="logo" src="../assets/img/dc-logo.png" alt=""/>
+          </div>
+          <nav class="header-nav">
+            <ul>
+              <li v-for="(link, index) in links" :key="index" :class="{active : link.current}"><a :href="link.url">{{link.text}}</a></li>
+            </ul>
+          </nav>
       </div>
   </header>
 </template>
@@ -25,6 +16,62 @@
 <script>
 export default {
   name: 'HeaderComponents',
+  data() {
+    return {
+      links: [
+        {
+          text: "CHARACTERS",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "COMICS",
+          url: "#",
+          current: true,
+        },
+        {
+          text: "MOVIES",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "TV",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "GAMES",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "COLLECTIBLES",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "VIDEOS",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "FANS",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "NEWS",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "SHOP",
+          url: "#",
+          current: false,
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -49,19 +96,21 @@ export default {
     width: 80%;
   }
   ul {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: right;
     line-height: 80px;
   }
   li {
-    list-style: none;
     font-size: 12px;
     margin: 0 10px;
   }
-
+  a {
+    color: black;
+  }
   li:hover {
-    border-bottom: 1px solid;
+    border-bottom: 4px solid;
     border-color: var(--primary-color);
+  }
+  a:hover {
+    color: var(--primary-color);
   }
 </style>

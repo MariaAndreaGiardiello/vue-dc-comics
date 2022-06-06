@@ -60,9 +60,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a {
-    text-decoration: none;
-}
 .footer-top {
     width: 100%;
     height: 250px;
@@ -78,10 +75,13 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
 }
-  li {
+a {
+    color: gray;
+}
+li {
     list-style: none;
     font-size: 12px;
-  }
+}
 .column {
     width: calc(100% / 3);
     display: flex;

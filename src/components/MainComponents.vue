@@ -51,6 +51,7 @@ export default {
     background-color: black;
     height: 80px;
     width: 100%;
+    margin-top: 4px;
 }
 .blue-container {
     background-color: var(--primary-color);
@@ -69,13 +70,9 @@ export default {
 }
 
 ul {
-display: flex;
-flex-wrap: wrap;
 justify-content: right;
 }
 li {
-list-style: none;
-font-size: 12px;
 display: flex;
 margin: 0 25px;
 }

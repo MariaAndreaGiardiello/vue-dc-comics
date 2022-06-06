@@ -9,4 +9,19 @@
         CONTAINERS SIZE
     --------------------*/
     --container-md: 75rem;
+
+    /*--------------------
+        COMMON
+    --------------------*/
+        a {
+        text-decoration: none;
+        }
+        ul {
+        display: flex;
+        flex-wrap: wrap;
+        }
+        li {
+        list-style: none;
+        }
+
 }
