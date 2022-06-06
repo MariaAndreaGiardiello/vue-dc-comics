@@ -1,8 +1,10 @@
 <template>
   <main class="main">
+        <div class="main-hero"></div>
         <div class="black-container">
             <div class="container">
-                <h1 class="main-top-text"> --> content goes here</h1>
+                <h4 class="main-title">CURRENT SERIES</h4>
+                <div class="comics" v-for="i in 12" :key="i"></div>
             </div>
         </div>
         <div class="blue-container">
@@ -44,14 +46,21 @@ export default {
 
 <style lang="scss" scoped>
 .main {
-    height: 180px;
+    height: 100vh;
     width: 100%;
+}
+.main-hero {
+    background-image: url(../assets/img/jumbotron.jpg);
+    height: 300px;
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 4px;
 }
 .black-container {
     background-color: black;
     height: 80px;
     width: 100%;
-    margin-top: 4px;
 }
 .blue-container {
     background-color: var(--primary-color);
@@ -59,9 +68,11 @@ export default {
     width: 100%;
 }
 
-.main-top-text {
+.main-title {
     color: white;
-    line-height: 80px;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    margin-top: -20px;
 }
 .main-icons {
     height: 35px;
