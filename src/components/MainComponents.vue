@@ -7,6 +7,7 @@
                 <div class="comics-list">
                     <div class="comics" v-for="(comics , index) in comics" :key="index">
                         <img class="comics-cover" :src="comics.src" alt="">
+                        <h5 class="comics-series">{{comics.series}}</h5>
                     </div>
                 </div>
             </div>
@@ -162,14 +163,20 @@ export default {
     width: 100%;
 }
 .comics {
-    width: calc(15% - 10px);
+    width: calc(18% - 35px);
     height: 150px;
     background-color: white;
-    margin: 10px;
+    margin: 25px 10px;
 }
 .comics-cover {
     height: 150px;
     width: 100%;
+}
+.comics-series {
+    color: white;
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 12px;
 }
 
 .main-icons {
